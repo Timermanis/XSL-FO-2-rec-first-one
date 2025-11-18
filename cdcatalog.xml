@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
+<customers>
+    <customer>
+        <name>Jo Ellis
+        </name>
+        <address>
+            100 Main Street
+        </address>
+    </customer>
+    <customer>
+        <name>Janis Timermanis
+        </name>
+        <address>
+            18 Woodbine Terrace
+        </address>
+    </customer>
+</customers>
