@@ -15,13 +15,15 @@
         </fo:simple-page-master>
       </fo:layout-master-set>
       
-      <fo:page-sequence master-reference="A4-portrait">
+      <fo:page-sequence master-reference="A4-portrait"  initial-page-number="1">
         
         <fo:static-content flow-name="xsl-region-before">
           <fo:block font-family="sans-serif" font-size="14pt" font-weight="bold" text-align="center" border-bottom="1pt solid black" padding-bottom="3pt">
-            Customer List
+            Customer List 
           </fo:block>
         </fo:static-content>
+        
+
         
         <fo:flow flow-name="xsl-region-body">
           
@@ -33,6 +35,9 @@
           
         </fo:flow>
       </fo:page-sequence>
+      
+
+
     </fo:root>
   </xsl:template>
   
@@ -42,6 +47,9 @@
         <xsl:value-of select="normalize-space(name)"/>
       </fo:block>
       <fo:block font-family="serif" font-size="10pt" color="#555555">
+        <xsl:value-of select="normalize-space(address)"/>
+      </fo:block>
+      <fo:block font-family="serif" font-size="18pt" color="#3134caff">
         <xsl:value-of select="normalize-space(address)"/>
       </fo:block>
     </fo:block-container>

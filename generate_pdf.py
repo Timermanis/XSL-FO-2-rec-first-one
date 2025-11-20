@@ -61,6 +61,11 @@ def render_fo_to_pdf(fo_path, pdf_path, fop_executable):
             capture_output=True,
             text=True
         )
+        ####
+        exit_code = result.returncode
+        print("\n--- FOP Execution Results ---")
+        print(f"Exit Code: {exit_code}")
+        ####
         print(f"Successfully generated PDF: {pdf_path}")
         
     except subprocess.CalledProcessError as e:

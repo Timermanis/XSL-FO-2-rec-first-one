@@ -2,14 +2,14 @@
 <!DOCTYPE xml>
 <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
 <customers>
-    <customer>
+    <customer CustomerID="GREAL">
         <name>Jo Ellis
         </name>
         <address>
             100 Main Street
         </address>
     </customer>
-    <customer>
+    <customer CustomerID="TIMJA">
         <name>Janis Timermanis
         </name>
         <address>
