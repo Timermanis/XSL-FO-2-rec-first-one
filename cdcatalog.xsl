@@ -12,10 +12,11 @@
                                margin-left="2.5cm" margin-right="2.5cm">
           <fo:region-body margin-top="1.5cm"/>
           <fo:region-before extent="1.5cm"/>
+          <fo:region-after extent="1.5cm"/>
         </fo:simple-page-master>
       </fo:layout-master-set>
       
-      <fo:page-sequence master-reference="A4-portrait"  initial-page-number="1">
+      <fo:page-sequence master-reference="A4-portrait"  >
         
         <fo:static-content flow-name="xsl-region-before">
           <fo:block font-family="sans-serif" font-size="14pt" font-weight="bold" text-align="center" border-bottom="1pt solid black" padding-bottom="3pt">
@@ -23,7 +24,11 @@
           </fo:block>
         </fo:static-content>
         
-
+        <fo:static-content flow-name="xsl-region-after">
+          <fo:block text-align="center">
+            Page <fo:page-number/>
+          </fo:block>
+        </fo:static-content>
         
         <fo:flow flow-name="xsl-region-body">
           

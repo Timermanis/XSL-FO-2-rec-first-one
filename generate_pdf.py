@@ -51,18 +51,23 @@ def render_fo_to_pdf(fo_path, pdf_path, fop_executable):
     print("\nStep 2: Rendering XSL-FO to PDF using FOP...")
     
     # Construct the FOP command
-    command = [fop_executable, '-fo', fo_path, '-pdf', pdf_path]
+    command = [fop_executable,'-d', '-fo', fo_path, '-pdf', pdf_path] # -d :))
     
     try:
         # Execute the command and capture output
         result = subprocess.run(
             command,
-            check=True,  # Raises an exception for non-zero exit codes (errors)
+            check=False,  # Raises an exception for non-zero exit codes (errors) if TRUE!!!!
             capture_output=True,
             text=True
         )
         ####
         exit_code = result.returncode
+        print("--- FOP STDOUT (Output) ---")
+        print(result.stdout)
+
+        print("--- FOP STDERR (Errors/Warnings) ---")
+        print(result.stderr)
         print("\n--- FOP Execution Results ---")
         print(f"Exit Code: {exit_code}")
         ####
